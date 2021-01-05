@@ -55,3 +55,11 @@ functions = ".netlify/functions"
 - Test your function locally: `npm run start-functions`
 - Create a second release and push this release to github
 - You can test the function at `http://***.netlify.app/.netlify/functions/test` 
+
+
+### Resources
+- <https://kentcdodds.com/blog/super-simple-start-to-netlify-functions>
+- <https://codeburst.io/write-and-deploy-your-first-serverless-function-within-10-minutes-or-less-d7552fcd6550>
+- <https://functions.netlify.com/tutorials/>
+- <https://www.netlify.com/blog/2019/11/30/how-to-deploy-a-vue-site/>
+- <http://danielkummer.github.io/git-flow-cheatsheet/>
