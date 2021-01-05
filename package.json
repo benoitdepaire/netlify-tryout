@@ -1,6 +1,6 @@
 {
   "name": "netlify-tryout",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -10,7 +10,9 @@
     "build-functions": "netlify-lambda build functions"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "googleapis": "^66.0.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
