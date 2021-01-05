@@ -66,7 +66,9 @@ export default {
       this.getCalendarEvents();
     } else {
       console.log("call axios google-auth");
-      axios.get("http://localhost:9000/.netlify/functions/google-auth").then(res => {
+      //authURL = "http://localhost:9000/.netlify/functions/google-auth"
+      authURL = "http://loving-dijkstra-1b1330.netlify.app/.netlify/functions/google-auth"
+      axios.get(authURL).then(res => {
         console.log(res);
         this.url = res.data.googleConsentURL;
       });

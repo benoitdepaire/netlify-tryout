@@ -4,7 +4,8 @@ exports.handler = async (event, context) => {
 
   const CLIENT_ID_HERE = "1089282576141-mv6t45022af9o865qmnr9g7qsov2asb6.apps.googleusercontent.com"
   const CLIENT_SECRET_HERE = "bbkIBdgwv7wAHbd05DlvYDpa"
-  const REDIRECT_URIS_HERE = "http://localhost:9000/.netlify/functions/fetch-calendar"
+  //const REDIRECT_URIS_HERE = "http://localhost:9000/.netlify/functions/fetch-calendar"
+  const REDIRECT_URIS_HERE = "http://loving-dijkstra-1b1330.netlify.app/.netlify/functions/fetch-calendar"
 
   let googleConsentURL;
   try{
