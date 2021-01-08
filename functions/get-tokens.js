@@ -7,9 +7,13 @@ exports.handler = async (event, context) => {
   const GRANT_CODE = params.code;
 
 
-  const CLIENT_ID = "1089282576141-mv6t45022af9o865qmnr9g7qsov2asb6.apps.googleusercontent.com"
-  const CLIENT_SECRET= "..."
+  const CLIENT_ID = "COPY CLIENT ID HERE"
+  const CLIENT_SECRET= "COPY SECRET HERE"
+
+
+  
   const REDIRECT_URIS= "http://localhost:9000/.netlify/functions/get-tokens"
+  // const REDIRECT_URIS= "https://loving-dijkstra-1b1330.netlify.app/.netlify/functions/get-tokens"
   const SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
   //Create an authentication client
   const AUTH_CLIENT = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URIS);

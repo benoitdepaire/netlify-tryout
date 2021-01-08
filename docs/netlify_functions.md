@@ -6,6 +6,8 @@ The purpose was to use Netlify Functions to make Google API Calls. This way, we 
 2. Next we need to use the grant code to get an access code (and preferably also a refresh code such that we don't always have to go through the previous step). We would like to store this code somewhere (refresh code) for subsequent use. (This is implemented in `functions/get-tokens.js`)
 3. Next we create a limited API that does the API call to Google for our application while using the refresh code that we have stored. (This is implemented in `functions/get-calendar-data.js`)
 
+
+
 ### References
 - <https://dev.to/shortdiv/take-charge-of-your-meeting-schedule-with-the-google-calendar-api-and-netlify-functions-1dhp>
 - <https://github.com/googleapis/google-api-nodejs-client#authorizing-and-authenticating>
