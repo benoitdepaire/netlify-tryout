@@ -1,6 +1,8 @@
 const {google} = require('googleapis');
 
 exports.handler = async (event, context) => {
+  // This function is called by Google after the user granted access. We retreive the grant code from the 
+  // GET Header
   let params = event.queryStringParameters;
   const GRANT_CODE = params.code;
 
@@ -9,11 +11,13 @@ exports.handler = async (event, context) => {
   const CLIENT_SECRET= "..."
   const REDIRECT_URIS= "http://localhost:9000/.netlify/functions/get-tokens"
   const SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
-
+  //Create an authentication client
   const AUTH_CLIENT = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URIS);
+  //Request access and refresh code from Google with the authentication client
   let tokenObject = await AUTH_CLIENT.getToken(GRANT_CODE);
-  console.log(tokenObject)
+  //console.log(tokenObject)
 
+  // In this case, show the access token object. Should become: store the access token object
   return {
     statusCode: 200,
     headers: {
