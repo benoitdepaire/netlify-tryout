@@ -28,3 +28,6 @@ netlify-tryout.code-workspace
 
 #Netlify
 /.netlify
+
+# Sensitive data not to be shared remotely
+/functions/sensitive-data.json
