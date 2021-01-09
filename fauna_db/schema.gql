@@ -1,0 +1,15 @@
+type Credential {
+  appName: String!
+  clientId: String
+  clientSecret: String
+  token: [Token] @relation
+}
+
+type Token{
+  access_token: String
+  refresh_token: String
+  scope: [String!]
+  token_type: String
+  expiry_date: String
+  credential: Credential!
+}
