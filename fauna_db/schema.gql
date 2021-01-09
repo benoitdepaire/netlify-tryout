@@ -2,7 +2,7 @@ type Credential {
   appName: String!
   clientId: String
   clientSecret: String
-  token: [Token] @relation
+  token: Token @relation
 }
 
 type Token{
@@ -12,4 +12,8 @@ type Token{
   token_type: String
   expiry_date: String
   credential: Credential!
+}
+
+type Query{
+  credentialByAppName(appName: String!): Credential
 }
