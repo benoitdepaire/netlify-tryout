@@ -1,19 +1,20 @@
 const query = require("./utils/query");
 
 const GET_CREDENTIALS = `
-query{
-  credentialByAppName(appName: "Appointment Scheduler"){
-    appName
-    token{
-      access_token, 
-      refresh_token
-    }
+query getToken($credentialId: String!){
+  credentialByCredentialId(credentialId: $credentialId){
+    access_token: accessToken
+    refresh_token: refreshToken
+    scope
+    token_type : tokenType
+    expiry_date : expiryDate
   }
 }
 `;
 
 exports.handler = async () => {
-  const { data, errors } = await query(GET_CREDENTIALS);
+  const VARS = {"credentialId" : "Appointment Scheduler dummy1"}
+  const { data, errors } = await query(GET_CREDENTIALS, VARS);
   console.log("this point reached");
   console.log(data);
 
@@ -26,6 +27,6 @@ exports.handler = async () => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ token: data.credentialByAppName.token}),
+    body: JSON.stringify({ token: data.credentialByCredentialId}),
   };
 };

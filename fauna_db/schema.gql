@@ -1,19 +1,16 @@
 type Credential {
-  appName: String!
+  credentialId: String!
+  appName: String
   clientId: String
   clientSecret: String
-  token: Token @relation
-}
-
-type Token{
-  access_token: String
-  refresh_token: String
+  accessToken: String
+  refreshToken: String
   scope: [String!]
-  token_type: String
-  expiry_date: String
-  credential: Credential!
+  tokenType: String
+  expiryDate: String
 }
 
 type Query{
   credentialByAppName(appName: String!): Credential
+  credentialByCredentialId(credentialId: String!): Credential
 }
