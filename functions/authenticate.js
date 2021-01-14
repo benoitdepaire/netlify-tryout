@@ -1,3 +1,4 @@
+//This function can be called directly and will retrieve an URL where the user can authenticate himself
 const {google} = require('googleapis');
 require("dotenv").config();
 
