@@ -7,8 +7,8 @@ exports.handler = async (event, context) => {
   const CLIENT_SECRET= process.env.CLIENT_SECRET
 
   
-  const REDIRECT_URIS= "http://localhost:9000/.netlify/functions/get-tokens"
-  // const REDIRECT_URIS= "https://loving-dijkstra-1b1330.netlify.app/.netlify/functions/get-tokens"
+  //const REDIRECT_URIS= "http://localhost:9000/.netlify/functions/get-tokens"
+  const REDIRECT_URIS= "https://loving-dijkstra-1b1330.netlify.app/.netlify/functions/get-tokens"
   const SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
 
 

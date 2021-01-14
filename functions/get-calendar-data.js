@@ -31,8 +31,8 @@ exports.handler = async (event, context) => {
   const CLIENT_SECRET= process.env.CLIENT_SECRET
   const credentialId = "dummy2";
 
-  const REDIRECT_URI= "http://localhost:9000/.netlify/functions/get-tokens"
-  // const REDIRECT_URIS= "https://loving-dijkstra-1b1330.netlify.app/.netlify/functions/get-tokens"
+  // const REDIRECT_URI= "http://localhost:9000/.netlify/functions/get-tokens"
+  const REDIRECT_URIS= "https://loving-dijkstra-1b1330.netlify.app/.netlify/functions/get-tokens"
 
 
   const {data, errors} = await query(GET_CREDENTIALS, {credentialId})

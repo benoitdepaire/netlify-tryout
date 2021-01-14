@@ -28,7 +28,7 @@ exports.handler = async (event, context) => {
   async function getAccessToken(code){
     const CLIENT_ID_HERE = process.env.CLIENT_ID;
     const CLIENT_SECRET_HERE = process.env.CLIENT_SECRET;
-    //const REDIRECT_URIS_HERE = "http://localhost:9000/.netlify/functions/fetch-calendar";
+    // const REDIRECT_URIS_HERE = "http://localhost:9000/.netlify/functions/fetch-calendar";
     const REDIRECT_URIS_HERE = "https://loving-dijkstra-1b1330.netlify.app/.netlify/functions/fetch-calendar";
 
     let oAuth2Client = new google.auth.OAuth2(
