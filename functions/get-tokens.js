@@ -144,6 +144,6 @@ exports.handler = async (event, context) => {
       "Cache-Control": "no-cache",
        "Content-Type": "text/html"
     },
-    body: JSON.stringify({ cred })
+    body: JSON.stringify("Credentials stored")
   };
 }
