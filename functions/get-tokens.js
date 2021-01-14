@@ -78,8 +78,8 @@ exports.handler = async (event, context) => {
   const credentialId = "dummy2";
   const appName =  "Appointment Scheduler2";
 
-  const REDIRECT_URIS= "http://localhost:9000/.netlify/functions/get-tokens"
-  // const REDIRECT_URIS= "https://loving-dijkstra-1b1330.netlify.app/.netlify/functions/get-tokens"
+  // const REDIRECT_URIS= "http://localhost:9000/.netlify/functions/get-tokens"
+  const REDIRECT_URIS= "https://loving-dijkstra-1b1330.netlify.app/.netlify/functions/get-tokens"
   const SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
   
   
