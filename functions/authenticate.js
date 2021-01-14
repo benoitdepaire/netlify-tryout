@@ -1,8 +1,10 @@
+//This function can be called directly and will retrieve an URL where the user can authenticate himself
 const {google} = require('googleapis');
+require("dotenv").config();
 
 exports.handler = async (event, context) => {
-  const CLIENT_ID = "COPY CLIENT ID HERE"
-  const CLIENT_SECRET= "COPY SECRET HERE"
+  const CLIENT_ID = process.env.CLIENT_ID
+  const CLIENT_SECRET= process.env.CLIENT_SECRET
 
   
   const REDIRECT_URIS= "http://localhost:9000/.netlify/functions/get-tokens"

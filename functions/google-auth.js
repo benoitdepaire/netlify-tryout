@@ -1,9 +1,10 @@
 const { google } = require("googleapis");
+require("dotenv").config();
 
 exports.handler = async (event, context) => {
 
-  const CLIENT_ID_HERE = "1089282576141-mv6t45022af9o865qmnr9g7qsov2asb6.apps.googleusercontent.com"
-  const CLIENT_SECRET_HERE = "bbkIBdgwv7wAHbd05DlvYDpa"
+  const CLIENT_ID_HERE = process.env.CLIENT_ID
+  const CLIENT_SECRET_HERE = process.env.CLIENT_SECRET
   //const REDIRECT_URIS_HERE = "http://localhost:9000/.netlify/functions/fetch-calendar"
   const REDIRECT_URIS_HERE = "https://loving-dijkstra-1b1330.netlify.app/.netlify/functions/fetch-calendar"
 

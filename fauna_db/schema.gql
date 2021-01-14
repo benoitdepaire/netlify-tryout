@@ -1,0 +1,16 @@
+type Credential {
+  credentialId: String!
+  appName: String
+  clientId: String
+  clientSecret: String
+  accessToken: String
+  refreshToken: String
+  scope: [String!]
+  tokenType: String
+  expiryDate: String
+}
+
+type Query{
+  credentialByAppName(appName: String!): Credential
+  credentialByCredentialId(credentialId: String!): Credential
+}
